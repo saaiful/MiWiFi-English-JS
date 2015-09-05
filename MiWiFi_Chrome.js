@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MiWiFi in English
 // @namespace    http://saiful.im/miwifi/
-// @version      5
+// @version      1
 // @description  Xiaomi AC Router Translation in English
 // @author       Saiful Islam
 // @match        http://miwifi.com/*
