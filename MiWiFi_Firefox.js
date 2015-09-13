@@ -2,7 +2,7 @@
 // @name         MiWiFi in English
 // @namespace    http://saiful.im/miwifi/
 // @version      1.8
-// @description  Xiaomi AC Router Translation in English (Google Chrome)
+// @description  Xiaomi AC Router Translation in English (Mozilla Firefox)
 // @author       Saiful Islam
 // @match        http://miwifi.com/*
 // @match        http://192.168.31.1/*
@@ -28,12 +28,6 @@ function errorFix()
 	$("#piechart > svg:nth-child(2)").remove();
 	$("#piechartcat > svg:nth-child(2)").remove();
 	$("#ioStatus > svg:nth-child(2)").remove();
-	$('input:text').css('height', 40, 'important');
-	$('input:text').css('width', 330, 'important');
-	$('input:password').css('height', 40, 'important');
-	$('.form-item .ipt-text').css('width', 330, 'important');
-	$('.form-item-select .k').css('width', 300, 'important');
-	$('.form-item .k').css('width', 300, 'important');
 	$('.mod-set .hd h3').css('width', "100%", 'important');
 	$(".panel-mask, .panel-loading").hide();
 	clearInterval(document.intR);
@@ -47,14 +41,11 @@ console.log('starting');
 		document.str = replaceAll(key, value, document.str);
 	}); 
 	document.documentElement.innerHTML = "";
-	document.open('text/html');document.write(document.str);document.close();
+	$('html').html(document.str);
 	console.log('done');
 	errorFix();
 	$(document).on('click', '.btn', function() {
 	    $(".d-is-open").css({top: '20%', position:'fixed'});
-	    $('input:text').css('height', 40, 'important');
-		$('input:text').css('width', 330, 'important');
-		$('input:password').css('height', 40, 'important');
 	});
 });
 
